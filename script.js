@@ -102,14 +102,13 @@ function renderTimeBox(data) {
 }
 
 function renderLocationBox(data) {
-  current_location.innerText = `${data.regionName}, ${data.countryCode}`;
-  current_timezone.innerText = data.timezone;
-  api_timezone = `${data.timezone}/${data.regionName}`;
+  current_location.innerText = `${data.city}, ${data.country_code}`;
+  current_timezone.innerText = data.time_zone;
+  api_timezone = `${data.time_zone}/${data.city}`;
 }
 
 // Fetching & rendering Location|Quote
-const location_api = "http://ip-api.com/json/";
-// const location_api = "https://freegeoip.app/";
+const location_api = "https://api.ipbase.com/v1/json/";
 const quote_api = "https://api.quotable.io/random/";
 
 async function getQuote() {
@@ -133,7 +132,6 @@ async function getLocation() {
   try {
     const { data } = await axios(location_api);
     renderLocationBox(data);
-    // console.log(data);
   } catch (error) {
     if (error.response.status === 404) {
       return error;
