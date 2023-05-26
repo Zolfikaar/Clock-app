@@ -42,8 +42,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Zolfikaar/Clock-app)
-- Live Site URL: [live Preview](https://zolfikaar.github.io/Clock-app/)
+- [Solution URL](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM)
+- [Live Preview](https://zolfikaar.github.io/Clock-app/)
+- [IP Geolocation API](https://freegeoip.app/)
+- [lukePeavey/quotable](https://api.quotable.io/random/) to generate random quote
 
 ## My process
 
