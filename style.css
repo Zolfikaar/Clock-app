@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+h1{
+  font-weight: bold;
+  font-size: 200px;
+  letter-spacing: -5px;
+  line-height: 200px;
+}
+h2{
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 68px;
+}
+h3{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+h4{
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 4px;
+}
+h5{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+h6{
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.btn{
+  width: 146px;
+  height: 56px;
+  border-radius: 30px;
+}
+body{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+body .details-sec-box .left-side div h6,
+body .details-sec-box .left-side div h2,
+body .details-sec-box .right-side div h6,
+body .details-sec-box .right-side div h2{
+  color: #fff;
+}
+body.day .details-sec-box .left-side div h6,
+body.day .details-sec-box .left-side div h2,
+body.day .details-sec-box .right-side div h6,
+body.day .details-sec-box .right-side div h2{
+  color: #303030;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.clock-sec,
+.details-sec{
+  z-index: 3;
+  height: 50vh;
+}
+.msg,
+.location,
+.btn{
+  text-transform: uppercase;
+}
+.overlay{
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+}
+.clock-sec .clock-sec-box{
+  transition: all ease-in-out .3s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.clock-sec .clock-sec-box .quote{
+  transition: all ease-in-out .3s;
+  margin-top: 40px;
+  width: 575px;
+  position: relative;
+  display: block;
+}
+.clock-sec .clock-sec-box .quote p{
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.clock-sec .clock-sec-box .quote .refresh{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+.clock-sec .clock-sec-box .clock{
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+.clock-sec .clock-sec-box .clock .msg{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.clock-sec .clock-sec-box .clock .msg svg{
+  margin-right: 10px;
+}
+.clock-sec .clock-sec-box .clock .time,
+.clock-sec .clock-sec-box .clock .offset{
+  display: inline-block;
+}
+.clock-sec .clock-sec-box .clock .offset{
+  margin-left: 20px;
+  font-weight: normal;
+}
+.clock-sec .clock-sec-box .clock .btn{
+  transition: all ease-in-out .3s;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  color: #00000080;
+  width: 146px;
+  height: 56px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10px;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  border: none;
+}
+.clock-sec .clock-sec-box .clock .btn svg{
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 16px 10px 15px 12px;
+}
+.clock-sec .clock-sec-box .clock .btn.show svg{
+  padding: 1px;
+}
+.clock-sec .clock-sec-box .clock .btn:hover svg{
+  background-color: #999;
+  transition: all ease-in-out .2s;
+}
+
+.details-sec{
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  opacity: 89%;
+  display: none;
+  transition: all ease-in-out .3s;
+}
+.details-sec h6{text-transform: uppercase;}
+.details-sec .details-sec-box{
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+.details-sec .details-sec-box .left-side{
+  margin-right: 100px;
+}
+.details-sec .details-sec-box .right-side,
+.details-sec .details-sec-box .left-side{width: 50%;}
+.details-sec .details-sec-box .right-side{
+  border-left: 1px solid #30303054;
+  padding-left: 100px;
+}
+.details-sec .details-sec-box .right-side .timezone,
+.details-sec .details-sec-box .left-side .timezone{
+  margin-bottom: 50px;
+}
+
+/* Phone Screen */
+@media only screen and (min-width: 375px) and (max-width: 767px){
+  h1{
+    font-weight: bold;
+    font-size: 100px;
+    letter-spacing: -2.5px;
+    line-height: 100px;
+  }
+  h2{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: auto;
+  }
+  h3{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  h4{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 3px;
+  }
+  h5{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  h6{
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+  body{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .container{
+    width: 90%;
+  }
+  .clock-sec .clock-sec-box .clock {
+    margin-bottom: 150px;
+    margin-top: 30px;
+  }
+  .clock-sec .clock-sec-box .clock .msg .currently{
+    display: none;
+  }
+  .clock-sec .clock-sec-box .clock .time{
+    margin: 20px 0;
+  }
+  .clock-sec .clock-sec-box .clock .offset{
+    margin-left: unset;
+  }
+  .clock-sec .clock-sec-box .quote {
+    width: 100%;
+  }
+  .clock-sec .clock-sec-box .clock .btn {
+    left: 0;
+    bottom: 15px;
+  }
+  .details-sec .details-sec-box {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+  }
+  .details-sec .details-sec-box .left-side,
+  .details-sec .details-sec-box .right-side{
+    width: 100%;
+  }
+  .details-sec .details-sec-box .left-side .timezone{
+    margin-bottom: unset;
+  }
+  .details-sec .details-sec-box .right-side{
+    border-left: unset;
+    padding-left: unset;
+  }
+  .details-sec .details-sec-box .left-side div,
+  .details-sec .details-sec-box .right-side div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Tablet Screen */
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+  h1{
+    font-weight: bold;
+    font-size: 175px;
+    letter-spacing: -4.38px;
+    line-height: 175px;
+  }
+  h2{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: auto;
+  }
+  h3{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+  }
+  h4{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+  h5{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  h6{
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 2.6px;
+  }
+  body{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .container{
+    width: 90%;
+  }
+  .clock-sec .clock-sec-box .clock {
+    margin-bottom: 150px;
+  }
+   .clock-sec .clock-sec-box .clock .btn {
+    right: unset;
+    left: 0;
+    bottom: 50px;
+  }
+  .clock-sec .clock-sec-box .clock .btn {
+    left: 0;
+    bottom: 20px;
+  }
+  .clock-sec .clock-sec-box .clock .msg .currently{
+    display: block;
+  }
+  .clock-sec .clock-sec-box .quote {
+    width: 100%;
+  }
+}
