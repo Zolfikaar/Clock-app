@@ -1,10 +1,3 @@
-// let detailsHeadersLeft = document.querySelector(
-//   ".details-sec-box .left-side div:nth-child()"
-// );
-
-// let detailsHeadersright = document.querySelector(
-//   ".details-sec-box .right-side div h6"
-// );
 let clockBox = document.querySelector(".clock-sec .clock-sec-box"),
   quoteBox = document.querySelector(".clock-sec .clock-sec-box .quote"),
   timeMsg = document.querySelector(
@@ -96,8 +89,6 @@ function renderTimeBox(data) {
     document.body.style.backgroundImage =
       "url('./assets/desktop/bg-image-nighttime.jpg')";
     detailsBox.style.backgroundColor = "#000";
-    // detailsHeadersLeft.style.color = "#fff";
-    // detailsHeadersright.style.color = "#fff";
     timeMsgIcon.innerHTML = `
     <path d="M22.157 17.366a.802.802 0 00-.891-.248 8.463 8.463 0 01-2.866.482c-4.853 0-8.8-3.949-8.8-8.8a8.773 8.773 0 013.856-7.274.801.801 0 00-.334-1.454A7.766 7.766 0 0012 0C5.382 0 0 5.382 0 12s5.382 12 12 12c4.2 0 8.02-2.134 10.218-5.709a.805.805 0 00-.061-.925z" fill="#FFF" fill-rule="nonzero"/>
     `;
@@ -117,7 +108,8 @@ function renderLocationBox(data) {
 }
 
 // Fetching & rendering Location|Quote
-const location_api = "http://ip-api.com/json/ ";
+const location_api = "http://ip-api.com/json/";
+// const location_api = "https://freegeoip.app/";
 const quote_api = "https://api.quotable.io/random/";
 
 async function getQuote() {
@@ -141,6 +133,7 @@ async function getLocation() {
   try {
     const { data } = await axios(location_api);
     renderLocationBox(data);
+    // console.log(data);
   } catch (error) {
     if (error.response.status === 404) {
       return error;
